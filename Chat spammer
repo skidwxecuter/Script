@@ -82,7 +82,7 @@ Config = {
         end -- ask chat gpt to create beautifull embed or make it yourself, this is default one that works if u dont care!   
     },
     BannerSettings = {
-        Enabled = false,
+        Enabled = true,
         ServerName = 'Splunk Scripts',
         TimeBeforeBanner = 10, -- in seconds
         ServerLink = 'X2cE85xF9m', -- CODE, NOT LINK!!!
