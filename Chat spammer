@@ -91,10 +91,10 @@ Config = {
         end -- ask chat gpt to create beautifull embed or make it yourself, this is default one that works if u dont care!
     },
     BannerSettings = {
-        Enabled = false,
+        Enabled = true,
         ServerName = "Splunk Scripts",
-        TimeBeforeBanner = 10, -- in seconds
-        ServerLink = "X2cE85xF9m" -- CODE, NOT LINK!!!
+        TimeBeforeBanner = 1, -- in seconds
+        ServerLink = "Raped" -- CODE, NOT LINK!!!
     },
     DiscordBotConnectionSettings = {
         DiscordId = "1360020953253281975" -- if u put ur id here, u will be able to use /execute command on every victim of your hitters!
